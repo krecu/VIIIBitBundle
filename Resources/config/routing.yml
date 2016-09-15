@@ -1,0 +1,11 @@
+viii_bit_homepage:
+    path:     /
+    defaults: { _controller: VIIIBitBundle:Default:index }
+
+viii_bit_data:
+    path:     /api/data
+    defaults: { _controller: VIIIBitBundle:Default:jsonOk }
+
+viii_bit_error:
+    path:     /api/error
+    defaults: { _controller: VIIIBitBundle:Default:jsonBad }

@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "title": "Response",
+  "data": {
+    "type": "object",
+    "title": "Response data",
+    "properties": {
+      "locations": {
+        "type": "array",
+        "title": "locations items",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Location name",
+              "type": "string"
+            },
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": {
+                  "title": "Latitude",
+                  "type": "number",
+                  "required": true
+                },
+                "long": {
+                  "title": "Longitude",
+                  "type": "number",
+                  "required": true
+                }
+              },
+              "required": [
+                "lat",
+                "long"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "coordinates"
+          ]
+        }
+      }
+    },
+    "required": [
+      "locations"
+    ]
+  },
+  "success": {
+    "title": "Latitude",
+    "type": "boolean",
+    "required": true
+  },
+  "additionalProperties" : true
+}

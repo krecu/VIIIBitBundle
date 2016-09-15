@@ -1,0 +1,41 @@
+Need to implement Symfony2 bundle for getting JSON-encoded locations data stored in predefined format.
+<br>
+<h2>Acceptance criteria</h2>
+
+<ul>
+    <li>Client should be defined as a service class in a bundle config;</li>
+    <li>Client should utilize CURL as a transport layer (can rely upon any third-party bundle however should be implemented as a separate class/package);</li>
+    <li>Properly defined exceptions should be thrown on CURL errors, malformed JSON response and error JSON response;</li>
+    <li>Resulting data should be fetched as an array (or other collection) of properly defined PHP objects.</li>
+</ul>
+
+<h2>JSON response format</h2>
+
+<pre>
+{
+    “data”: {
+        “locations”: [{
+            “name”: “Eiffel Tower”,
+            “coordinates”: {
+                “lat”: 21.12,
+                “long”: 19.56
+            }
+        },
+        ...
+        ]
+    },
+    “success”: true
+}
+</pre>
+
+<h2>JSON error response format</h2>
+
+<pre>
+{
+    “data”: {
+        “message”: &lt;string error message&gt;,
+        “code”: &lt;string error code&gt;
+    },
+    “success”: false
+}
+</pre>
