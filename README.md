@@ -8,7 +8,7 @@ Add to composer.json repositories "krecu/VIIIBitBundle": "dev-master"
     "repositories": [
             {
                 "type": "vcs",
-                "url":  ""
+                "url":  "git@github.com:krecu/VIIIBitBundle.git"
             }
     ]
 }
@@ -16,7 +16,7 @@ Add to composer.json repositories "krecu/VIIIBitBundle": "dev-master"
 
 Add to AppKernel.php
 ```php
-new Krecu\tests\VIIIBitBundle\VIIIBitBundle()
+new VIIIBitBundle\VIIIBitBundle()
 ```
 
 Add parameters to parameters.yml
@@ -37,7 +37,9 @@ Run install in you symfony project
 
 ```bash
 composer install
+bin/console server:start 127.0.0.1:9001
 ```
+
 
 #### Using service VIIbitService
 
