@@ -61,8 +61,9 @@ foreach ($items as $item) {
 
 Bundle implement fabric interface Transport - it was boring...
 
-#### Run tests
+#### Run tests or command
 
 ```bash
 phpunit .
+bin/console 8bit:run
 ```
